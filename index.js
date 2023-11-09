@@ -2,7 +2,6 @@ let coloursArr = []
 
 renderPalleteHTML()
 
-// When submit button is clicked
 document.addEventListener("submit", function(e){
     
     // Stop refresh
@@ -12,7 +11,8 @@ document.addEventListener("submit", function(e){
     const selectedMode = document.getElementById('mode-select').value
     
     const apiURL = `https://www.thecolorapi.com/scheme?hex=${selectedColour}&mode=${selectedMode}`
-      
+    
+    // Get colour scheme
     fetch(apiURL)
     .then(res => res.json())
     .then(data => {
