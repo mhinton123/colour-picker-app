@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colour Picker</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmNirM6fPpi4uxoU5K/CKhbuPLm2MlXtqbC3hd6QV6+0ptlvc8eW6lXjkjJl+Gq" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-qzYHBKF5bVVvJ9p+8SfLMbL6b3G63s4Y8gpzFQNV5zFQQFwCJSfADIfGKc9tsfFf" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-Q7kK9WnuBjz3cb4ZO7d8w1zBBQlXs8ptVSzR7uUg3t4lXG5wJxYDTz5l/IdpPnMj" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="main-wrapper">
+        <nav>
+            <form>
+                <input id="colour-picker" type="color">
+                    <select class="form-select">
+                        <option value="Monochrome" selected>Monochrome</option>
+                        <option value="Monochrome-dark">Monochrome-dark</option>
+                        <option value="Monochrome-light">Monochrome-light</option>
+                        <option value="Analogic">Analogic</option>
+                        <option value="Complement">Complement</option>
+                        <option value="Analogic-complement">Analogic-complement</option>
+                        <option value="Triad">Triad</option>
+                    </select>
+                <button id="get-scheme-btn" type="submit">Get colour scheme</button>
+            </form>
+        </nav>
+        <main>
+
+            <div class="colour-wr">
+                <div class="colour-pane" style="background-color: red;" ></div>
+                <div class="colour-info-wr">
+                    <p class="colour-value">#FFFFFF</p>
+                </div>
+            </div>
+
+            <div class="colour-wr">
+                <div class="colour-pane" style="background-color: blue;"></div>
+                <div class="colour-info-wr">
+                    <p class="colour-value">#FFFFFF</p>
+                </div>
+            </div>
+
+            <div class="colour-wr">
+                <div class="colour-pane" style="background-color: green;"></div>
+                <div class="colour-info-wr">
+                    <p class="colour-value">#FFFFFF</p>
+                </div>
+            </div>
+
+            <div class="colour-wr">
+                <div class="colour-pane" style="background-color: purple;"></div>
+                <div class="colour-info-wr">
+                    <p class="colour-value">#FFFFFF</p>
+                </div>
+            </div>
+
+            <div class="colour-wr">
+                <div class="colour-pane" style="background-color: orange;"></div>
+                <div class="colour-info-wr">
+                    <p class="colour-value">#FFFFFF</p>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
