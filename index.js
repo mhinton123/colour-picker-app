@@ -1,7 +1,5 @@
 let coloursArr = []
 
-renderPalleteHTML()
-
 document.addEventListener("submit", function(e){
     
     // Stop refresh
@@ -22,6 +20,21 @@ document.addEventListener("submit", function(e){
         
     })
 })
+
+document.addEventListener('click', function(event) {
+    
+    let clickedColour = ''
+    if (event.target.classList.contains('colour-pane')) { 
+        clickedColour = event.target.nextElementSibling.innerText
+    }
+    else if (event.target.classList.contains('colour-info-wr') ||
+    event.target.classList.contains('colour-value')) {
+        clickedColour = event.target.previousElementSibling.innerText
+    }
+
+    copyToClipboard(clickedColour)
+});
+
     
 function renderPalleteHTML () {
 
@@ -35,7 +48,29 @@ function renderPalleteHTML () {
             </div>
         </div>
         `
-        document.getElementById('pallete').innerHTML = html
+
     });
+    document.getElementById('pallete').innerHTML = html
+}
+
+
+function copyToClipboard(value) {
+    const el = document.createElement('textarea');
+    el.value = value;
+    el.setAttribute('readonly', '');
+    el.style.position = 'absolute';
+    el.style.left = '-9999px';
+    document.body.appendChild(el);
+
+    const selected =
+        document.getSelection().rangeCount > 0 ? document.getSelection().getRangeAt(0) : false;
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+
+    if (selected) {
+        document.getSelection().removeAllRanges();
+        document.getSelection().addRange(selected);
+    }
 }
     
