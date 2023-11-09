@@ -33,6 +33,7 @@ document.addEventListener('click', function(event) {
     }
 
     copyToClipboard(clickedColour)
+    showPopupMessage()
 });
 
     
@@ -73,4 +74,19 @@ function copyToClipboard(value) {
         document.getSelection().addRange(selected);
     }
 }
+
+function showPopupMessage() {
+    const popup = document.getElementById('popupMessage')
+    popup.style.opacity = '1'
+
+    setTimeout(() => {
+        popup.style.opacity = '0'
+    }, 2000); 
+
+    setTimeout(() => {
+        popup.style.display = 'none'
+    }, 2300);
+}
+
+
     
