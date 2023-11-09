@@ -2,6 +2,14 @@ body {
     margin: 0;
     font-family: inter, sans-serif;
     font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E7E4E4;
+}
+
+.main-wrapper {
+    max-width: 500px;
 }
 
 select, input, button {
@@ -22,6 +30,7 @@ nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #fff;
 }
 
 form {
@@ -75,6 +84,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #fff;
 }
 
 .colour-value {
